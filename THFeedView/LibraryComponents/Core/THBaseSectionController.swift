@@ -22,5 +22,39 @@ public protocol BaseSectionControllerProtocol: AnyObject {
                     indexPath: IndexPath, model: AnyHashable) -> UICollectionViewCell
         
     func configureSnapshot(snapshot: inout CustomSnapshot)
+    
 }
 
+
+open class BaseSectionController<T: Codable & Hashable>: NSObject, BaseSectionControllerProtocol {
+    
+    public let section: BaseSection
+    
+     public init(section: BaseSection) {
+        self.section = section
+        super.init()
+    }
+           
+    final public func configureDataSource(in collectionView: UICollectionView, with dataSource: inout CustomDataSource) {
+        dataSource = CustomDataSource(collectionView: collectionView) { (collectionView, indexPath, model) -> UICollectionViewCell? in
+            return self.createCell(in: collectionView, indexPath: indexPath, model: model)
+        }
+    }
+    
+    final public func createCell(in collectionView: UICollectionView, indexPath: IndexPath, model: AnyHashable) -> UICollectionViewCell {
+        guard let model = model.base as? T else { fatalError("Verify model type") }
+        return createCell(in: collectionView, indexPath: indexPath, model: model)
+    }
+    
+    open func createCell(in collectionView: UICollectionView, indexPath: IndexPath, model: T) -> UICollectionViewCell {
+           // only override
+           fatalError("must be override")
+       }
+
+
+    final public func configureSnapshot(snapshot: inout CustomSnapshot) {
+        snapshot.appendSections([section.id])
+        snapshot.appendItems(section.data)
+    }
+    
+}
