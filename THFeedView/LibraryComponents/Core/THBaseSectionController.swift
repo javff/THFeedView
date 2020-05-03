@@ -20,6 +20,8 @@ public protocol BaseSectionControllerProtocol: AnyObject {
     
     func createCell(in collectionView: UICollectionView,
                     indexPath: IndexPath, model: AnyHashable) -> UICollectionViewCell
+    
+    func feedView(_ feedView: THFeedView, didSelect item: AnyHashable)
         
     func configureSnapshot(snapshot: inout CustomSnapshot)
     
@@ -50,6 +52,15 @@ open class BaseSectionController<T: Codable & Hashable>: NSObject, BaseSectionCo
            // only override
            fatalError("must be override")
        }
+    
+    final public func feedView(_ feedView: THFeedView, didSelect item: AnyHashable) {
+        guard let model = item.base as? T else { fatalError("Verify model type") }
+        self.feedView(feedView, didSelect: model)
+    }
+    
+    open func feedView(_ feedView: THFeedView, didSelect item: T) {
+        // only override
+    }
 
 
     final public func configureSnapshot(snapshot: inout CustomSnapshot) {

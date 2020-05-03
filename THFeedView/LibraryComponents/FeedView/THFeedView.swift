@@ -17,6 +17,7 @@ public class THFeedView: UIView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .white
+        collectionView.delegate = self
         return collectionView
     }()
     
@@ -93,10 +94,22 @@ public class THFeedView: UIView {
     private func generateLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int,
             layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+            if self.sections.isEmpty { return THFeedLayouts.fullWindowLayout(isWide: false)}
             let isWideView = layoutEnvironment.container.effectiveContentSize.width > 500
             let section = self.sections[sectionIndex]
             return self.sectionProvider.createLayout(for: section, isWide: isWideView)
         }
         return layout
+    }
+}
+
+extension THFeedView: UICollectionViewDelegate {
+    
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let section = sections[indexPath.section]
+        if let sc = sectionProvider.find(section: section),
+            let item = collectionDataSource.itemIdentifier(for: indexPath) {
+            sc.feedView(self, didSelect: item)
+        }
     }
 }
