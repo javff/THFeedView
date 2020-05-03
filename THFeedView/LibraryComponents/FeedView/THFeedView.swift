@@ -51,6 +51,8 @@ public class THFeedView: UIView {
     //MARK: - funcs
     
     private func initComponent() {
+        registerDefaultCells()
+        registerDefaultBoundaryView()
         sectionProvider.registerCells(in: collectionView)
         setupView()
         setupConstraints()
@@ -83,8 +85,31 @@ public class THFeedView: UIView {
             return sectionController?.createCell(in: collectionView, indexPath: indexPath, model: element)
         })
         
+            
+        collectionDataSource.supplementaryViewProvider = { (
+            collectionView: UICollectionView,
+            kind: String,
+            indexPath: IndexPath) -> UICollectionReusableView? in
+            
+            let sectionController = self.sectionProvider.find(sectionIndex: indexPath.section)
+            
+            return sectionController?.createSupplementaryView(in: self.collectionView, kind: kind, indexPath: indexPath)
+        }
+        
         configureSnapshots()
         collectionDataSource.apply(snapshot, animatingDifferences: true)
+    }
+    
+    private func registerDefaultCells() {
+        //TODO
+    }
+    
+    private func registerDefaultBoundaryView() {
+        collectionView.register(
+          THHeaderView.self,
+          forSupplementaryViewOfKind: THHeaderView.reuseIdentifier,
+          withReuseIdentifier: THHeaderView.reuseIdentifier
+        )
     }
     
     public func reloadData() {
