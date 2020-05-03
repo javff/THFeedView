@@ -31,9 +31,11 @@ public protocol BaseSectionControllerProtocol: AnyObject {
 open class BaseSectionController<T: Codable & Hashable>: NSObject, BaseSectionControllerProtocol {
     
     public let section: BaseSection
+    public weak var viewController: UIViewController?
     
-     public init(section: BaseSection) {
+    public init(section: BaseSection, in viewController: UIViewController?) {
         self.section = section
+        self.viewController = viewController
         super.init()
     }
            
