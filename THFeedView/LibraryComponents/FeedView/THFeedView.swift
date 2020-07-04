@@ -122,7 +122,10 @@ public class THFeedView: UIView {
             if self.sections.isEmpty { return THFeedLayouts.fullWindowLayout(isWide: false)}
             let isWideView = layoutEnvironment.container.effectiveContentSize.width > 500
             let section = self.sections[sectionIndex]
-            return self.sectionProvider.createLayout(for: section, isWide: isWideView)
+            guard let sc = self.sectionProvider.find(section: section) else {
+                 return THFeedLayouts.fullWindowLayout(isWide: isWideView)
+            }
+            return sc.createLayout(isWide: isWideView)
         }
         return layout
     }

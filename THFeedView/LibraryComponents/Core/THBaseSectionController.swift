@@ -27,6 +27,7 @@ public protocol BaseSectionControllerProtocol: AnyObject {
         
     func configureSnapshot(snapshot: inout CustomSnapshot)
     
+    func createLayout(isWide: Bool) -> NSCollectionLayoutSection
 }
 
 
@@ -70,6 +71,11 @@ open class BaseSectionController<T: Codable & Hashable>: NSObject, BaseSectionCo
         // only override
         return nil
     }
+    
+    open func createLayout(isWide: Bool) -> NSCollectionLayoutSection {
+        return THFeedLayouts.fullWindowLayout(isWide: isWide)
+    }
+    
 
     final public func configureSnapshot(snapshot: inout CustomSnapshot) {
         snapshot.appendSections([section.id])
