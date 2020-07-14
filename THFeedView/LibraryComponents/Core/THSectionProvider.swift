@@ -12,7 +12,7 @@ import UIKit
 public protocol SectionProviderProtocol: class {
     var  registeredSections:[String: BaseSectionControllerProtocol.Type]  { get set }
     var  viewController: UIViewController? { get set }
-    func create(section: BaseSection) -> BaseSectionControllerProtocol
+    func create(section: BaseSection) -> BaseSectionControllerProtocol?
     func find(section: BaseSection) -> BaseSectionControllerProtocol?
     func find(sectionIndex position: Int) -> BaseSectionControllerProtocol?
 }
@@ -23,9 +23,9 @@ open class SectionProvider: NSObject, SectionProviderProtocol {
     public weak var viewController: UIViewController?
     private var cacheSections:[BaseSectionControllerProtocol] = []
     
-    final public func create(section: BaseSection) -> BaseSectionControllerProtocol {
+    final public func create(section: BaseSection) -> BaseSectionControllerProtocol? {
         guard let SectionControllerType = registeredSections[section.sectionType] else {
-            fatalError("ver como hacer que esto no explote")
+            return nil
         }
         let sectionController = SectionControllerType.init(section: section, viewController: viewController)
         cacheSections.append(sectionController)

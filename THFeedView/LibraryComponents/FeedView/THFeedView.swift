@@ -70,9 +70,9 @@ public class THFeedView: UIView {
     }
     
     private func configureSnapshots() {
-        for section in sections {
-            let sc = sectionProvider.create(section: section)
-            sc.configureSnapshot(snapshot: &snapshot)
+        let sections = self.sections.compactMap({sectionProvider.create(section: $0)})
+        sections.forEach { (section) in
+            section.configureSnapshot(snapshot: &snapshot)
         }
     }
     
