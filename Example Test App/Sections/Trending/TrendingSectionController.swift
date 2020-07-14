@@ -25,4 +25,12 @@ class TrendingSectionController: BaseSectionController<TrendingModel> {
         cell.backgroundColor = .red
         return cell
     }
+    
+    override func createLayout(isWide: Bool) -> NSCollectionLayoutSection {
+        THFeedLayouts.fullWindowLayout(isWide: isWide)
+    }
+    
+    override func createSupplementaryView(in collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? {
+        return nil
+    }
 }

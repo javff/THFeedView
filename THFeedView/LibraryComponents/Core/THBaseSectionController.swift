@@ -28,6 +28,8 @@ public protocol BaseSectionControllerProtocol: AnyObject {
     func configureSnapshot(snapshot: inout CustomSnapshot)
     
     func createLayout(isWide: Bool) -> NSCollectionLayoutSection
+    
+    init(section: BaseSection, viewController: UIViewController?)
 }
 
 
@@ -36,7 +38,7 @@ open class BaseSectionController<T: Codable & Hashable>: NSObject, BaseSectionCo
     public let section: BaseSection
     public weak var viewController: UIViewController?
     
-    public init(section: BaseSection, in viewController: UIViewController?) {
+    public required init(section: BaseSection, viewController: UIViewController?) {
         self.section = section
         self.viewController = viewController
         super.init()

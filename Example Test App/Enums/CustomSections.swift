@@ -10,12 +10,16 @@ import Foundation
 import THFeedView
 
 struct CustomSection: BaseSection {
+   
+    var sectionType: String {
+        return type.rawValue
+    }
     let id: String
     let type: SectionType
     var data: [AnyHashable]
 }
 
 
-enum SectionType {
-    case trending
+enum SectionType: String {
+    case trending = "trending"
 }

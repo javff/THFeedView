@@ -10,5 +10,6 @@ import Foundation
 
 public protocol BaseSection: Any {
     var id: String { get }
+    var sectionType: String { get }
     var data: [AnyHashable] { get }
 }

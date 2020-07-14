@@ -51,7 +51,6 @@ public class THFeedView: UIView {
     //MARK: - funcs
     
     private func initComponent() {
-        registerDefaultCells()
         registerDefaultBoundaryView()
         setupView()
         setupConstraints()
@@ -97,10 +96,6 @@ public class THFeedView: UIView {
         
         configureSnapshots()
         collectionDataSource.apply(snapshot, animatingDifferences: true)
-    }
-    
-    private func registerDefaultCells() {
-        //TODO
     }
     
     private func registerDefaultBoundaryView() {
