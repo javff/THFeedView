@@ -53,7 +53,6 @@ public class THFeedView: UIView {
     private func initComponent() {
         registerDefaultCells()
         registerDefaultBoundaryView()
-        sectionProvider.registerCells(in: collectionView)
         setupView()
         setupConstraints()
     }

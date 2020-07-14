@@ -8,7 +8,8 @@
 
 import Foundation
 import UIKit
+import THFeedView
 
-class TrendingCell: UICollectionViewCell {
+class TrendingCell: UICollectionViewCell, ReusableView {
     
 }

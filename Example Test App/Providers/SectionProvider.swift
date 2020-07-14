@@ -32,11 +32,5 @@ class CustomSectionProvider: SectionProviderProtocol {
     
     func find(sectionIndex position: Int) -> BaseSectionControllerProtocol? {
         return cacheSections[position]
-    }
-    
-    func registerCells(in collectionView: UICollectionView) {
-        collectionView.register(TrendingCell.self, forCellWithReuseIdentifier: "trending")
-    }
-    
-    
+    }    
 }

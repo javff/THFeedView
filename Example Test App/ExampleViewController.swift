@@ -9,7 +9,7 @@
 import UIKit
 import THFeedView
 
-class ViewController: UIViewController {
+class ExampleViewController: UIViewController {
     
     var sectionsMock: [BaseSection] = []
     
@@ -25,9 +25,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
         sectionProvider.controller = self
         sectionsMock = Helpers.generateMocks()
         feedView.reloadData()
+    }
+    
+    private func setupView() {
+        navigationItem.title = "Example Home"
     }
     
     override func viewDidLayoutSubviews() {
@@ -36,7 +41,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: THFeedViewDataSource {
+extension ExampleViewController: THFeedViewDataSource {
     
     func getSections(for feedView: THFeedView) -> [BaseSection] {
         return sectionsMock

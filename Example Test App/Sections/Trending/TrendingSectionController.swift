@@ -21,11 +21,8 @@ class TrendingSectionController: BaseSectionController<TrendingModel> {
     
     override func createCell(in collectionView: UICollectionView, indexPath: IndexPath, model: TrendingModel) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "trending", for: indexPath) as? TrendingCell else {
-            fatalError()
-        }
-        
+        let cell: TrendingCell = collectionView.dequeueReusableCell(indexPath: indexPath)
         cell.backgroundColor = .red
         return cell
-       }
+    }
 }

@@ -13,5 +13,4 @@ public protocol SectionProviderProtocol: AnyObject {
     func create(section: BaseSection) -> BaseSectionControllerProtocol
     func find(section: BaseSection) -> BaseSectionControllerProtocol?
     func find(sectionIndex position: Int) -> BaseSectionControllerProtocol?
-    func registerCells(in collectionView: UICollectionView)
 }
