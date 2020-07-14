@@ -15,7 +15,7 @@ extension UICollectionView {
         register(T.self, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
     }
    
-    private func register<T: UITableViewCell>(_: T.Type) where T: ReusableView, T: NibLoadableView {
+    private func register<T: UICollectionViewCell>(_: T.Type) where T: ReusableView, T: NibLoadableView {
         let bundle = Bundle(for: T.self)
         let nib = UINib(nibName: T.nibName, bundle: bundle)
         register(nib, forCellWithReuseIdentifier: T.defaultReuseIdentifier)

@@ -136,7 +136,6 @@
 			children = (
 				E20EE16A246A39E1006B8A2E /* Helpers */,
 				E20EE167246A37B1006B8A2E /* Sections */,
-				E20EE164246A3727006B8A2E /* Providers */,
 				E20EE161246A363E006B8A2E /* Enums */,
 				E20EE149246A35F4006B8A2E /* AppDelegate.swift */,
 				E20EE14B246A35F4006B8A2E /* SceneDelegate.swift */,
@@ -162,13 +161,6 @@
 				E20EE162246A3652006B8A2E /* CustomSections.swift */,
 			);
 			path = Enums;
-			sourceTree = "<group>";
-		};
-		E20EE164246A3727006B8A2E /* Providers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Providers;
 			sourceTree = "<group>";
 		};
 		E20EE167246A37B1006B8A2E /* Sections */ = {
