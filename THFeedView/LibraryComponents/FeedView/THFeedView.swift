@@ -51,7 +51,6 @@ public class THFeedView: UIView {
     //MARK: - funcs
     
     private func initComponent() {
-        registerDefaultBoundaryView()
         setupView()
         setupConstraints()
     }
@@ -70,9 +69,8 @@ public class THFeedView: UIView {
     }
     
     private func configureSnapshots() {
-        let sections = self.sections.compactMap({sectionProvider.create(section: $0)})
-        sections.forEach { (section) in
-            section.configureSnapshot(snapshot: &snapshot)
+       self.sections.compactMap({sectionProvider.create(section: $0)}).forEach {
+            $0.configureSnapshot(snapshot: &snapshot)
         }
     }
     
@@ -97,14 +95,6 @@ public class THFeedView: UIView {
         
         configureSnapshots()
         collectionDataSource.apply(snapshot, animatingDifferences: true)
-    }
-    
-    private func registerDefaultBoundaryView() {
-        collectionView.register(
-          THHeaderView.self,
-          forSupplementaryViewOfKind: THHeaderView.reuseIdentifier,
-          withReuseIdentifier: THHeaderView.reuseIdentifier
-        )
     }
     
     public func reloadData() {
@@ -133,7 +123,6 @@ public class THFeedView: UIView {
             }
             
             layout.boundarySupplementaryItems = sectionSupplementaryView.layoutBoundarySuplementaryView()
-           
             return layout
         }
         return layout

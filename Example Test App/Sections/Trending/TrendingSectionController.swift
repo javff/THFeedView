@@ -35,7 +35,7 @@ extension TrendingSectionController: SectionSupplementaryView {
     func layoutBoundarySuplementaryView() -> [NSCollectionLayoutBoundarySupplementaryItem] {
         
         let size = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1),
+            widthDimension: .fractionalWidth(1.0),
             heightDimension: .estimated(44.0)
         )
 
@@ -49,9 +49,10 @@ extension TrendingSectionController: SectionSupplementaryView {
     }
 
     func createSupplementaryView(in collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? {
+                
         let header: TitleHeaderView = collectionView.dequeueReusableView(indexPath: indexPath, supplementaryViewOfKind: kind)
-        header.label.numberOfLines = 0
-        header.label.text = "Title burda de largo Title burda de largo Title burda de largo Title burda de largo Title burda de largo Title burda de largo Title burda de largo Title burda de largo"
+        
+        header.label.text = self.section.sectionType
         return header
     }
 }

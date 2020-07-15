@@ -29,7 +29,6 @@
 		E2AA1DF9245CA5110052BB98 /* THSectionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA1DF8245CA5110052BB98 /* THSectionProvider.swift */; };
 		E2AA1DFC245CA5680052BB98 /* THFeedViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA1DFB245CA5680052BB98 /* THFeedViewDataSource.swift */; };
 		E2AA1DFE245CA5720052BB98 /* THFeedViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA1DFD245CA5720052BB98 /* THFeedViewDelegate.swift */; };
-		E2AA1E0E245F68DE0052BB98 /* THHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA1E0D245F68DE0052BB98 /* THHeaderView.swift */; };
 		E2D1F3D324BD41C800B25E44 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D1F3D224BD41C800B25E44 /* ReusableView.swift */; };
 		E2D1F3D524BD425000B25E44 /* UICollectionView+ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D1F3D424BD425000B25E44 /* UICollectionView+ReusableView.swift */; };
 		E2D1F3D924BE8AC800B25E44 /* TitleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D1F3D824BE8AC800B25E44 /* TitleHeaderView.swift */; };
@@ -95,7 +94,6 @@
 		E2AA1DF8245CA5110052BB98 /* THSectionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THSectionProvider.swift; sourceTree = "<group>"; };
 		E2AA1DFB245CA5680052BB98 /* THFeedViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THFeedViewDataSource.swift; sourceTree = "<group>"; };
 		E2AA1DFD245CA5720052BB98 /* THFeedViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THFeedViewDelegate.swift; sourceTree = "<group>"; };
-		E2AA1E0D245F68DE0052BB98 /* THHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THHeaderView.swift; sourceTree = "<group>"; };
 		E2D1F3D224BD41C800B25E44 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		E2D1F3D424BD425000B25E44 /* UICollectionView+ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReusableView.swift"; sourceTree = "<group>"; };
 		E2D1F3D824BE8AC800B25E44 /* TitleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeaderView.swift; sourceTree = "<group>"; };
@@ -240,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				E2D1F3D124BD41B500B25E44 /* Extensions */,
-				E2AA1E0C245F68CA0052BB98 /* HeaderViews */,
 				E2AA1DEB245CA3FA0052BB98 /* Core */,
 				E2AA1DF1245CA48A0052BB98 /* Layouts */,
 				E2AA1DF4245CA4CC0052BB98 /* FeedView */,
@@ -275,14 +272,6 @@
 				E2AA1DFD245CA5720052BB98 /* THFeedViewDelegate.swift */,
 			);
 			path = FeedView;
-			sourceTree = "<group>";
-		};
-		E2AA1E0C245F68CA0052BB98 /* HeaderViews */ = {
-			isa = PBXGroup;
-			children = (
-				E2AA1E0D245F68DE0052BB98 /* THHeaderView.swift */,
-			);
-			path = HeaderViews;
 			sourceTree = "<group>";
 		};
 		E2D1F3D124BD41B500B25E44 /* Extensions */ = {
@@ -511,7 +500,6 @@
 				E2AA1DED245CA4190052BB98 /* THBaseSectionController.swift in Sources */,
 				E2AA1DFE245CA5720052BB98 /* THFeedViewDelegate.swift in Sources */,
 				E2AA1DF6245CA4D80052BB98 /* THFeedView.swift in Sources */,
-				E2AA1E0E245F68DE0052BB98 /* THHeaderView.swift in Sources */,
 				E2D1F3D524BD425000B25E44 /* UICollectionView+ReusableView.swift in Sources */,
 				E2D1F3D324BD41C800B25E44 /* ReusableView.swift in Sources */,
 				E2AA1DF3245CA4960052BB98 /* THLayouts.swift in Sources */,
