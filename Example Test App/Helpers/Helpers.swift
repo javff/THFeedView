@@ -17,32 +17,23 @@ class Helpers {
                 id: "id1",
                 type: .trending,
                 data: [
-                    TrendingModel(id: "id1", image_url: "testing", title: "Trending Top", description: "Testing trending top"),
-                TrendingModel(id: "id2", image_url: "testing", title: "Trending Top", description: "Testing trending top"),
-                TrendingModel(id: "id3", image_url: "testing", title: "Trending Top", description: "Testing trending top"),
-                TrendingModel(id: "id4", image_url: "testing", title: "Trending Top", description: "Testing trending top"),
-                TrendingModel(id: "id5", image_url: "testing", title: "Trending Top", description: "Testing trending top"),
-                TrendingModel(id: "id6", image_url: "testing", title: "Trending Top", description: "Testing trending top"),
-                TrendingModel(id: "id7", image_url: "testing", title: "Trending Top", description: "Testing trending top"),
-                TrendingModel(id: "id8", image_url: "testing", title: "Trending Top", description: "Testing trending top"),
-                TrendingModel(id: "id9", image_url: "testing", title: "Trending Top", description: "Testing trending top")
+                    TrendingModel(id: "id1",
+                                  image_url: "geek",
+                                  title: "Geek",
+                                  description: "Descubre"),
+                    TrendingModel(id: "id2",
+                    image_url: "geek",
+                    title: "Geek",
+                    description: "Descubre"),
+                    TrendingModel(id: "id3",
+                    image_url: "geek",
+                    title: "Geek",
+                    description: "Descubre"),
+                    TrendingModel(id: "id4",
+                    image_url: "geek",
+                    title: "Geek",
+                    description: "Descubre")
                 ]
-            ),
-            CustomSection(
-                id: "id2",
-                type: .trending,
-                data: [
-                    TrendingModel(id: "i1", image_url: "testing", title: "Trending Top", description: "Testing trending top"),
-                    TrendingModel(id: "i2", image_url: "testing", title: "Trending Top", description: "Testing trending top"),
-                    TrendingModel(id: "i3", image_url: "testing", title: "Trending Top", description: "Testing trending top"),
-                    TrendingModel(id: "i4", image_url: "testing", title: "Trending Top", description: "Testing trending top"),
-                    TrendingModel(id: "i5", image_url: "testing", title: "Trending Top", description: "Testing trending top"),
-                    TrendingModel(id: "i6", image_url: "testing", title: "Trending Top", description: "Testing trending top"),
-                    TrendingModel(id: "i7", image_url: "testing", title: "Trending Top", description: "Testing trending top"),
-                    TrendingModel(id: "i8", image_url: "testing", title: "Trending Top", description: "Testing trending top"),
-                    TrendingModel(id: "i9", image_url: "testing", title: "Trending Top", description: "Testing trending top")
-                ]
-            )
-        ]
+            )]
     }
 }

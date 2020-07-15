@@ -16,7 +16,7 @@ public class THFeedView: UIView {
         let layout = self.generateLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .clear
         collectionView.delegate = self
         return collectionView
     }()
@@ -105,7 +105,7 @@ public class THFeedView: UIView {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int,
             layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
             guard !self.sections.isEmpty else {
-                return THFeedLayouts.fullWindowLayout(isWide: false)
+                return THFeedLayouts.simpleCardLayout()
             }
             
             let isWideView = layoutEnvironment.container.effectiveContentSize.width > 500
@@ -113,7 +113,7 @@ public class THFeedView: UIView {
             let section = self.sections[sectionIndex]
             
             guard let sc = self.sectionProvider.find(section: section) else {
-                return THFeedLayouts.fullWindowLayout(isWide: isWideView)
+                return THFeedLayouts.simpleCardLayout()
             }
             
             let layout = sc.createLayout(isWide: isWideView)

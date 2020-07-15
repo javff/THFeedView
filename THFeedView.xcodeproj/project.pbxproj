@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		E20EE14A246A35F4006B8A2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20EE149246A35F4006B8A2E /* AppDelegate.swift */; };
 		E20EE14C246A35F4006B8A2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20EE14B246A35F4006B8A2E /* SceneDelegate.swift */; };
-		E20EE14E246A35F4006B8A2E /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20EE14D246A35F4006B8A2E /* ExampleViewController.swift */; };
+		E20EE14E246A35F4006B8A2E /* MercadolibreHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20EE14D246A35F4006B8A2E /* MercadolibreHomeViewController.swift */; };
 		E20EE151246A35F4006B8A2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E20EE14F246A35F4006B8A2E /* Main.storyboard */; };
 		E20EE153246A35F5006B8A2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E20EE152246A35F5006B8A2E /* Assets.xcassets */; };
 		E20EE156246A35F5006B8A2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E20EE154246A35F5006B8A2E /* LaunchScreen.storyboard */; };
@@ -72,7 +72,7 @@
 		E20EE147246A35F4006B8A2E /* Example Test App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example Test App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20EE149246A35F4006B8A2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E20EE14B246A35F4006B8A2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E20EE14D246A35F4006B8A2E /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		E20EE14D246A35F4006B8A2E /* MercadolibreHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadolibreHomeViewController.swift; sourceTree = "<group>"; };
 		E20EE150246A35F4006B8A2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E20EE152246A35F5006B8A2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E20EE155246A35F5006B8A2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -138,13 +138,13 @@
 		E20EE148246A35F4006B8A2E /* Example Test App */ = {
 			isa = PBXGroup;
 			children = (
+				E2D1F3DE24BF32F500B25E44 /* Examples */,
 				E20EE16A246A39E1006B8A2E /* Helpers */,
 				E2D1F3D624BE8AA800B25E44 /* Headers */,
 				E20EE167246A37B1006B8A2E /* Sections */,
 				E20EE161246A363E006B8A2E /* Enums */,
 				E20EE149246A35F4006B8A2E /* AppDelegate.swift */,
 				E20EE14B246A35F4006B8A2E /* SceneDelegate.swift */,
-				E20EE14D246A35F4006B8A2E /* ExampleViewController.swift */,
 				E20EE14F246A35F4006B8A2E /* Main.storyboard */,
 				E20EE152246A35F5006B8A2E /* Assets.xcassets */,
 				E20EE154246A35F5006B8A2E /* LaunchScreen.storyboard */,
@@ -298,6 +298,38 @@
 				E2D1F3DA24BE8B9F00B25E44 /* TitleHeaderView.xib */,
 			);
 			path = Title;
+			sourceTree = "<group>";
+		};
+		E2D1F3DE24BF32F500B25E44 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				E2D1F3E124BF331C00B25E44 /* AmazonHome */,
+				E2D1F3E024BF330F00B25E44 /* AppStoreHome */,
+				E2D1F3DF24BF330000B25E44 /* MercadoLibreHome */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		E2D1F3DF24BF330000B25E44 /* MercadoLibreHome */ = {
+			isa = PBXGroup;
+			children = (
+				E20EE14D246A35F4006B8A2E /* MercadolibreHomeViewController.swift */,
+			);
+			path = MercadoLibreHome;
+			sourceTree = "<group>";
+		};
+		E2D1F3E024BF330F00B25E44 /* AppStoreHome */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppStoreHome;
+			sourceTree = "<group>";
+		};
+		E2D1F3E124BF331C00B25E44 /* AmazonHome */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AmazonHome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,7 +515,7 @@
 				E20EE16F246A3D32006B8A2E /* TrendingCell.swift in Sources */,
 				E20EE169246A37DC006B8A2E /* TrendingSectionController.swift in Sources */,
 				E20EE16C246A39EC006B8A2E /* Helpers.swift in Sources */,
-				E20EE14E246A35F4006B8A2E /* ExampleViewController.swift in Sources */,
+				E20EE14E246A35F4006B8A2E /* MercadolibreHomeViewController.swift in Sources */,
 				E20EE163246A3652006B8A2E /* CustomSections.swift in Sources */,
 				E20EE14A246A35F4006B8A2E /* AppDelegate.swift in Sources */,
 				E2D1F3D924BE8AC800B25E44 /* TitleHeaderView.swift in Sources */,

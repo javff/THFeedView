@@ -22,37 +22,37 @@ class TrendingSectionController: BaseSectionController<TrendingModel> {
     override func createCell(in collectionView: UICollectionView, indexPath: IndexPath, model: TrendingModel) -> UICollectionViewCell {
         
         let cell: TrendingCell = collectionView.dequeueReusableCell(indexPath: indexPath)
-        cell.backgroundColor = .red
+        cell.imageView.image = UIImage(named: model.image_url)
         return cell
     }
     
     override func createLayout(isWide: Bool) -> NSCollectionLayoutSection {
-        THFeedLayouts.fullWindowLayout(isWide: isWide)
+        THFeedLayouts.simpleCardLayout()
     }
 }
 
-extension TrendingSectionController: SectionSupplementaryView {
-    func layoutBoundarySuplementaryView() -> [NSCollectionLayoutBoundarySupplementaryItem] {
-        
-        let size = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(1.0),
-            heightDimension: .estimated(44.0)
-        )
-
-        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
-            layoutSize: size,
-            elementKind:  UICollectionView.elementKindSectionHeader,
-            alignment: .top
-        )
-        
-        return [sectionHeader]
-    }
-
-    func createSupplementaryView(in collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? {
-                
-        let header: TitleHeaderView = collectionView.dequeueReusableView(indexPath: indexPath, supplementaryViewOfKind: kind)
-        
-        header.label.text = self.section.sectionType
-        return header
-    }
-}
+//extension TrendingSectionController: SectionSupplementaryView {
+//    func layoutBoundarySuplementaryView() -> [NSCollectionLayoutBoundarySupplementaryItem] {
+//
+//        let size = NSCollectionLayoutSize(
+//            widthDimension: .fractionalWidth(1.0),
+//            heightDimension: .estimated(44.0)
+//        )
+//
+//        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+//            layoutSize: size,
+//            elementKind:  UICollectionView.elementKindSectionHeader,
+//            alignment: .top
+//        )
+//
+//        return [sectionHeader]
+//    }
+//
+//    func createSupplementaryView(in collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? {
+//
+//        let header: TitleHeaderView = collectionView.dequeueReusableView(indexPath: indexPath, supplementaryViewOfKind: kind)
+//
+//        header.label.text = self.section.sectionType
+//        return header
+//    }
+//}

@@ -68,7 +68,7 @@ open class BaseSectionController<T: Codable & Hashable>: NSObject, BaseSectionCo
     }
     
     open func createLayout(isWide: Bool) -> NSCollectionLayoutSection {
-        return THFeedLayouts.fullWindowLayout(isWide: isWide)
+        return THFeedLayouts.simpleCardLayout()
     }
 
     final public func configureSnapshot(snapshot: inout CustomSnapshot) {

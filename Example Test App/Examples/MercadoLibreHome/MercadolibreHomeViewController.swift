@@ -9,7 +9,7 @@
 import UIKit
 import THFeedView
 
-class ExampleViewController: UIViewController {
+class MercadolibreHomeViewController: UIViewController {
     
     var sectionsMock: [BaseSection] = []
     
@@ -18,7 +18,7 @@ class ExampleViewController: UIViewController {
     lazy var feedView: THFeedView = {
         let feedView = THFeedView(sectionProvider: self.sectionProvider)
         feedView.dataSource = self
-        feedView.backgroundColor = .blue
+        feedView.backgroundColor = .tertiarySystemGroupedBackground
         self.view.addSubview(feedView)
         return feedView
     }()
@@ -57,7 +57,7 @@ class ExampleViewController: UIViewController {
     }
 }
 
-extension ExampleViewController: THFeedViewDataSource {
+extension MercadolibreHomeViewController: THFeedViewDataSource {
     
     func getSections(for feedView: THFeedView) -> [BaseSection] {
         return sectionsMock
