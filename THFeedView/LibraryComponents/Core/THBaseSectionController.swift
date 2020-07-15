@@ -22,9 +22,7 @@ public protocol BaseSectionControllerProtocol: AnyObject {
                     indexPath: IndexPath, model: AnyHashable) -> UICollectionViewCell
     
     func feedView(_ feedView: THFeedView, didSelect item: AnyHashable)
-    
-    func createSupplementaryView(in collectionView: UICollectionView,kind: String, indexPath: IndexPath) -> UICollectionReusableView?
-        
+            
     func configureSnapshot(snapshot: inout CustomSnapshot)
     
     func createLayout(isWide: Bool) -> NSCollectionLayoutSection
@@ -69,15 +67,9 @@ open class BaseSectionController<T: Codable & Hashable>: NSObject, BaseSectionCo
         // only override
     }
     
-    open func createSupplementaryView(in collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? {
-        // only override
-        return nil
-    }
-    
     open func createLayout(isWide: Bool) -> NSCollectionLayoutSection {
         return THFeedLayouts.fullWindowLayout(isWide: isWide)
     }
-    
 
     final public func configureSnapshot(snapshot: inout CustomSnapshot) {
         snapshot.appendSections([section.id])

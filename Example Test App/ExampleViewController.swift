@@ -38,7 +38,7 @@ class ExampleViewController: UIViewController {
         registerSections()
         sectionProvider.viewController = self
         sectionsMock = Helpers.generateMocks()
-        feedView.reloadData()
+        self.feedView.reloadData()
     }
     
     private func registerSections() {

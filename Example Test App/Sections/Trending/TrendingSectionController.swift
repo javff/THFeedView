@@ -29,8 +29,29 @@ class TrendingSectionController: BaseSectionController<TrendingModel> {
     override func createLayout(isWide: Bool) -> NSCollectionLayoutSection {
         THFeedLayouts.fullWindowLayout(isWide: isWide)
     }
-    
-    override func createSupplementaryView(in collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? {
-        return nil
+}
+
+extension TrendingSectionController: SectionSupplementaryView {
+    func layoutBoundarySuplementaryView() -> [NSCollectionLayoutBoundarySupplementaryItem] {
+        
+        let size = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .estimated(44.0)
+        )
+
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: size,
+            elementKind:  UICollectionView.elementKindSectionHeader,
+            alignment: .top
+        )
+        
+        return [sectionHeader]
+    }
+
+    func createSupplementaryView(in collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? {
+        let header: TitleHeaderView = collectionView.dequeueReusableView(indexPath: indexPath, supplementaryViewOfKind: kind)
+        header.label.numberOfLines = 0
+        header.label.text = "Title burda de largo Title burda de largo Title burda de largo Title burda de largo Title burda de largo Title burda de largo Title burda de largo Title burda de largo"
+        return header
     }
 }

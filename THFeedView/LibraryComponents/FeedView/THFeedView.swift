@@ -82,16 +82,17 @@ public class THFeedView: UIView {
             let sectionController = self.sectionProvider.find(sectionIndex: indexPath.section)
             return sectionController?.createCell(in: collectionView, indexPath: indexPath, model: element)
         })
-        
             
         collectionDataSource.supplementaryViewProvider = { (
             collectionView: UICollectionView,
             kind: String,
             indexPath: IndexPath) -> UICollectionReusableView? in
             
-            let sectionController = self.sectionProvider.find(sectionIndex: indexPath.section)
+            guard let sectionController = self.sectionProvider.find(sectionIndex: indexPath.section) as? SectionSupplementaryView else {
+                return nil
+            }
             
-            return sectionController?.createSupplementaryView(in: self.collectionView, kind: kind, indexPath: indexPath)
+            return sectionController.createSupplementaryView(in: self.collectionView, kind: kind, indexPath: indexPath)
         }
         
         configureSnapshots()
@@ -113,13 +114,27 @@ public class THFeedView: UIView {
     private func generateLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int,
             layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
-            if self.sections.isEmpty { return THFeedLayouts.fullWindowLayout(isWide: false)}
-            let isWideView = layoutEnvironment.container.effectiveContentSize.width > 500
-            let section = self.sections[sectionIndex]
-            guard let sc = self.sectionProvider.find(section: section) else {
-                 return THFeedLayouts.fullWindowLayout(isWide: isWideView)
+            guard !self.sections.isEmpty else {
+                return THFeedLayouts.fullWindowLayout(isWide: false)
             }
-            return sc.createLayout(isWide: isWideView)
+            
+            let isWideView = layoutEnvironment.container.effectiveContentSize.width > 500
+            
+            let section = self.sections[sectionIndex]
+            
+            guard let sc = self.sectionProvider.find(section: section) else {
+                return THFeedLayouts.fullWindowLayout(isWide: isWideView)
+            }
+            
+            let layout = sc.createLayout(isWide: isWideView)
+            
+            guard let sectionSupplementaryView = sc as? SectionSupplementaryView else {
+                return layout
+            }
+            
+            layout.boundarySupplementaryItems = sectionSupplementaryView.layoutBoundarySuplementaryView()
+           
+            return layout
         }
         return layout
     }
