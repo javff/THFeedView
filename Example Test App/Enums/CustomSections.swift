@@ -22,4 +22,5 @@ struct CustomSection: BaseSection {
 
 enum SectionType: String {
     case trending = "trending"
+    case quickReco = "quickReco"
 }

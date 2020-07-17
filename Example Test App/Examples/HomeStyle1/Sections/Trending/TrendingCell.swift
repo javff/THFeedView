@@ -32,6 +32,14 @@ class TrendingCell: UICollectionViewCell, ReusableView {
         return imageView
     }()
     
+    let title: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 31)
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -45,8 +53,8 @@ class TrendingCell: UICollectionViewCell, ReusableView {
         contentView.addSubview(containerView)
         NSLayoutConstraint.activate([
             containerView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
-            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
+            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
             containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
         
@@ -56,6 +64,13 @@ class TrendingCell: UICollectionViewCell, ReusableView {
             imageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             imageView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
+        ])
+
+        containerView.addSubview(title)
+        NSLayoutConstraint.activate([
+            title.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
+            title.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
+            title.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -20)
         ])
     }
 }

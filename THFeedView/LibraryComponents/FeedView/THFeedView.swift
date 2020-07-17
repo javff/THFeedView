@@ -11,20 +11,37 @@ import UIKit
 
 public class THFeedView: UIView {
     
+    public struct Margins {
+         let interSectionSpacing: CGFloat
+         let topSpacing: CGFloat
+         let bottomSpacing: CGFloat
+        
+        public init(interSectionSpacing: CGFloat,
+                    topSpacing: CGFloat,
+                    bottomSpacing: CGFloat) {
+            self.interSectionSpacing = interSectionSpacing
+            self.bottomSpacing = bottomSpacing
+            self.topSpacing = topSpacing
+        }
+    }
+    
+    private var layout: UICollectionViewCompositionalLayout?
     //MARK: - UIVars
     private lazy var collectionView: UICollectionView = {
-        let layout = self.generateLayout()
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        self.layout = self.generateLayout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout!)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .clear
         collectionView.delegate = self
+        collectionView.contentInset = UIEdgeInsets(top: self.margins.topSpacing, left: 0, bottom: self.margins.bottomSpacing, right: 0)
         return collectionView
     }()
     
     //MARK: - Vars
     public weak var dataSource: THFeedViewDataSource?
     public weak var delegate: THFeedViewDelegate?
-    
+
+    public let margins: Margins
     private let sectionProvider: SectionProviderProtocol
     private var collectionDataSource: CustomDataSource!
     private var snapshot = CustomSnapshot()
@@ -38,9 +55,10 @@ public class THFeedView: UIView {
     }
     
     //MARK: - Inits
-     public init(frame: CGRect = .zero, sectionProvider: SectionProviderProtocol) {
+    public init(margins: Margins, sectionProvider: SectionProviderProtocol) {
         self.sectionProvider = sectionProvider
-        super.init(frame: frame)
+        self.margins = margins
+        super.init(frame: .zero)
         initComponent()
     }
     
@@ -101,7 +119,7 @@ public class THFeedView: UIView {
         configureDataSource()
     }
     
-    private func generateLayout() -> UICollectionViewLayout {
+    private func generateLayout() -> UICollectionViewCompositionalLayout {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int,
             layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
             guard !self.sections.isEmpty else {
@@ -116,15 +134,23 @@ public class THFeedView: UIView {
                 return THFeedLayouts.simpleCardLayout()
             }
             
-            let layout = sc.createLayout(isWide: isWideView)
+            let layoutSection = sc.createLayout(isWide: isWideView)
             
-            guard let sectionSupplementaryView = sc as? SectionSupplementaryView else {
-                return layout
+            if let sectionSupplementaryView = sc as? SectionSupplementaryView {
+                layoutSection.boundarySupplementaryItems = sectionSupplementaryView.layoutBoundarySuplementaryView()
             }
             
-            layout.boundarySupplementaryItems = sectionSupplementaryView.layoutBoundarySuplementaryView()
-            return layout
+            if let decorationView = sc as? SectionDecorationItem {
+                layoutSection.decorationItems = decorationView.layoutDecorationItems()
+                decorationView.registerDecorationItems(layout: self.layout!)
+            }
+            
+            return layoutSection
         }
+        
+        let config = UICollectionViewCompositionalLayoutConfiguration()
+        config.interSectionSpacing = self.margins.interSectionSpacing
+        layout.configuration = config
         return layout
     }
 }

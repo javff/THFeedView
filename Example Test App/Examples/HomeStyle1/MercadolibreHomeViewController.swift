@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeStyle1ViewController.swift
 //  Example Test App
 //
 //  Created by Juan Andres Vasquez Ferrer on 5/11/20.
@@ -9,14 +9,17 @@
 import UIKit
 import THFeedView
 
-class MercadolibreHomeViewController: UIViewController {
+class HomeStyle1ViewController: UIViewController {
     
     var sectionsMock: [BaseSection] = []
     
     let sectionProvider: SectionProviderProtocol
 
     lazy var feedView: THFeedView = {
-        let feedView = THFeedView(sectionProvider: self.sectionProvider)
+        let feedView = THFeedView(
+            margins: THFeedView.Margins(interSectionSpacing: 30, topSpacing: 30, bottomSpacing: 30),
+            sectionProvider: self.sectionProvider
+        )
         feedView.dataSource = self
         feedView.backgroundColor = .tertiarySystemGroupedBackground
         self.view.addSubview(feedView)
@@ -43,7 +46,8 @@ class MercadolibreHomeViewController: UIViewController {
     
     private func registerSections() {
         sectionProvider.registeredSections = [
-            SectionType.trending.rawValue: TrendingSectionController.self
+            SectionType.trending.rawValue: TrendingSectionController.self,
+            SectionType.quickReco.rawValue: QuickRecomendationsSectionController.self
         ]
     }
     
@@ -57,7 +61,7 @@ class MercadolibreHomeViewController: UIViewController {
     }
 }
 
-extension MercadolibreHomeViewController: THFeedViewDataSource {
+extension HomeStyle1ViewController: THFeedViewDataSource {
     
     func getSections(for feedView: THFeedView) -> [BaseSection] {
         return sectionsMock
