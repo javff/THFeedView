@@ -42,7 +42,7 @@ public class THFeedView: UIView {
     public weak var delegate: THFeedViewDelegate?
 
     public let margins: Margins
-    private let sectionProvider: SectionProviderProtocol
+    private let sectionProvider: FeedViewSectionProviderProtocol
     private var collectionDataSource: CustomDataSource!
     private var snapshot = CustomSnapshot()
     
@@ -55,7 +55,7 @@ public class THFeedView: UIView {
     }
     
     //MARK: - Inits
-    public init(margins: Margins, sectionProvider: SectionProviderProtocol) {
+    public init(margins: Margins, sectionProvider: FeedViewSectionProviderProtocol) {
         self.sectionProvider = sectionProvider
         self.margins = margins
         super.init(frame: .zero)

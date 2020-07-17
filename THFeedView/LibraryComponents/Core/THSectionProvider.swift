@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public protocol SectionProviderProtocol: class {
+public protocol FeedViewSectionProviderProtocol: class {
     var  registeredSections:[String: BaseSectionControllerProtocol.Type]  { get set }
     var  viewController: UIViewController? { get set }
     func create(section: BaseSection) -> BaseSectionControllerProtocol?
@@ -17,7 +17,7 @@ public protocol SectionProviderProtocol: class {
     func find(sectionIndex position: Int) -> BaseSectionControllerProtocol?
 }
 
-open class SectionProvider: NSObject, SectionProviderProtocol {
+open class FeedViewSectionProvider: NSObject, FeedViewSectionProviderProtocol {
     
     public var registeredSections:[String: BaseSectionControllerProtocol.Type] = [:]
     public weak var viewController: UIViewController?

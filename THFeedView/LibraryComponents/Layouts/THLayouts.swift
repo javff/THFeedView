@@ -40,8 +40,8 @@ public class THFeedLayouts {
           widthDimension: .fractionalWidth(1.0),
           heightDimension: .fractionalHeight(1.0)
         )
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
@@ -52,7 +52,7 @@ public class THFeedLayouts {
         group.interItemSpacing = .fixed(1)
         
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = NSDirectionalEdgeInsets(top: 1, leading: 16, bottom: 0, trailing: 16)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 1, leading: 16, bottom: 1, trailing: 16)
         
         section.interGroupSpacing = 1
                 
