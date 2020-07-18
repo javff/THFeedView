@@ -72,6 +72,10 @@ open class BaseSectionController<T: Codable & Hashable>: NSObject, BaseSectionCo
     }
 
     final public func configureSnapshot(snapshot: inout CustomSnapshot) {
+        guard !snapshot.sectionIdentifiers.contains(section.id) else {
+            NSLog("Id \(section.id) is repeteat. Ignoring section ...")
+            return
+        }
         snapshot.appendSections([section.id])
         snapshot.appendItems(section.data)
     }

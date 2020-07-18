@@ -20,40 +20,50 @@ class Example1DataProvider: DataSectionProviderProtocol {
         id: "id1",
         type: .trending,
         data: [
-            TrendingModel(id: "id1",
+            TrendingModel(id: "1",
                           image_url: "geek",
                           title: "Geek",
                           description: "Descubre")
         ]
     ),
     CustomSection(
-        id: "id11",
+        id: "id2",
         type: .quickReco,
         data: [
             QuickRecomendationsSectionModel(
-                id: "id2",
+                id: "1",
                 price: 1000.0,
                 image_url: "laptop",
                 title: "Asus",
                 description: "laptop x409fb-ek016t"),
             QuickRecomendationsSectionModel(
-                                id: "id3",
+                                id: "1",
                                 price: 1000.0,
                                 image_url: "laptop2",
                                 title: "Asus",
                                 description: "laptop x409fb-ek016t"),
             QuickRecomendationsSectionModel(
-                                id: "id4",
+                                id: "1",
                                 price: 1000.0,
                                 image_url: "laptop",
                                 title: "Geek",
                                 description: "Descubre"),
             QuickRecomendationsSectionModel(
-                                id: "id5",
+                                id: "1",
                                 price: 1000.0,
                                 image_url: "laptop2",
                                 title: "Geek",
-                                description: "Descubre")
-        ]
-    )]
+                                description: "Descubre"),
+    ),
+        CustomSection(
+            id: "id10",
+            type: .trending,
+            data: [
+                TrendingModel(id: "1111",
+                              image_url: "geek",
+                              title: "Geek",
+                              description: "Descubre")
+            ]
+        )
+    ]
 }
