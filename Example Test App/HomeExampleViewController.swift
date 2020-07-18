@@ -87,5 +87,9 @@ extension HomeExampleViewController: THFeedViewDataSource {
     func getSections(for feedView: THFeedView) -> [BaseSection] {
         return sections
     }
+    
+    func registerDecorationItems(layout: UICollectionViewCompositionalLayout) {
+        layout.register(QuickRecoBackgroundView.self, forDecorationViewOfKind: QuickRecoBackgroundView.defaultReuseIdentifier)
+    }
 }
 

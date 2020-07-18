@@ -7,7 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
 public protocol THFeedViewDataSource: class {
     func getSections(for feedView: THFeedView) -> [BaseSection]
+    func registerDecorationItems(layout: UICollectionViewCompositionalLayout)
+}
+
+public extension THFeedViewDataSource {
+    public func registerDecorationItems(layout: UICollectionViewCompositionalLayout) {}
 }

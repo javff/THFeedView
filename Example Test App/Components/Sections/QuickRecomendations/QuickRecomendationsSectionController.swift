@@ -95,8 +95,4 @@ extension QuickRecomendationsSectionController: SectionDecorationItem {
         let item = NSCollectionLayoutDecorationItem.background(elementKind: QuickRecoBackgroundView.defaultReuseIdentifier)
         return [item]
     }
-    
-    func registerDecorationItems(layout: UICollectionViewCompositionalLayout) {
-        layout.register(QuickRecoBackgroundView.self, forDecorationViewOfKind: QuickRecoBackgroundView.defaultReuseIdentifier)
-    }
 }

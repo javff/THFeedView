@@ -10,7 +10,5 @@ import Foundation
 import UIKit
 
 public protocol SectionDecorationItem: class {
-    
     func layoutDecorationItems() -> [NSCollectionLayoutDecorationItem]
-    func registerDecorationItems(layout: UICollectionViewCompositionalLayout)
 }

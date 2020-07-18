@@ -24,12 +24,12 @@ public class THFeedView: UIView {
             self.topSpacing = topSpacing
         }
     }
-    
-    private var layout: UICollectionViewCompositionalLayout?
+        
     //MARK: - UIVars
     private lazy var collectionView: UICollectionView = {
-        self.layout = self.generateLayout()
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout!)
+        let layout = self.generateLayout()
+        self.dataSource?.registerDecorationItems(layout: layout)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .clear
         collectionView.delegate = self
@@ -38,7 +38,11 @@ public class THFeedView: UIView {
     }()
     
     //MARK: - Vars
-    public weak var dataSource: THFeedViewDataSource?
+    public weak var dataSource: THFeedViewDataSource? {
+        didSet {
+            initComponent()
+        }
+    }
     public weak var delegate: THFeedViewDelegate?
 
     public let margins: Margins
@@ -59,7 +63,6 @@ public class THFeedView: UIView {
         self.sectionProvider = sectionProvider
         self.margins = margins
         super.init(frame: .zero)
-        initComponent()
     }
     
     required init?(coder: NSCoder) {
@@ -142,7 +145,6 @@ public class THFeedView: UIView {
             
             if let decorationView = sc as? SectionDecorationItem {
                 layoutSection.decorationItems = decorationView.layoutDecorationItems()
-                decorationView.registerDecorationItems(layout: self.layout!)
             }
             
             return layoutSection
