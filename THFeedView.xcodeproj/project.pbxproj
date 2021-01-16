@@ -19,28 +19,29 @@
 		E20EE169246A37DC006B8A2E /* TrendingSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20EE168246A37DC006B8A2E /* TrendingSectionController.swift */; };
 		E20EE16C246A39EC006B8A2E /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20EE16B246A39EC006B8A2E /* Mocks.swift */; };
 		E20EE16F246A3D32006B8A2E /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20EE16E246A3D32006B8A2E /* TrendingCell.swift */; };
+		E28768FA25B315BD000AFF2E /* THBaseDecorationItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28768EA25B315BD000AFF2E /* THBaseDecorationItems.swift */; };
+		E28768FB25B315BD000AFF2E /* THBaseSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28768EB25B315BD000AFF2E /* THBaseSectionController.swift */; };
+		E28768FC25B315BD000AFF2E /* THSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28768EC25B315BD000AFF2E /* THSection.swift */; };
+		E28768FD25B315BD000AFF2E /* THBaseSectionSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28768ED25B315BD000AFF2E /* THBaseSectionSupplementaryView.swift */; };
+		E28768FE25B315BD000AFF2E /* THSectionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28768EE25B315BD000AFF2E /* THSectionProvider.swift */; };
+		E28768FF25B315BD000AFF2E /* UICollectionView+ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28768F025B315BD000AFF2E /* UICollectionView+ReusableView.swift */; };
+		E287690025B315BD000AFF2E /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28768F125B315BD000AFF2E /* ReusableView.swift */; };
+		E287690125B315BD000AFF2E /* THLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28768F325B315BD000AFF2E /* THLayouts.swift */; };
+		E287690225B315BD000AFF2E /* THFeedViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28768F525B315BD000AFF2E /* THFeedViewDataSource.swift */; };
+		E287690325B315BD000AFF2E /* THFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28768F625B315BD000AFF2E /* THFeedView.swift */; };
+		E287690425B315BD000AFF2E /* THFeedViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28768F725B315BD000AFF2E /* THFeedViewDelegate.swift */; };
+		E287690525B315BD000AFF2E /* THFeedView.h in Headers */ = {isa = PBXBuildFile; fileRef = E28768F825B315BD000AFF2E /* THFeedView.h */; };
+		E287690625B315BD000AFF2E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E28768F925B315BD000AFF2E /* Info.plist */; };
 		E2AA1DD9245CA3C40052BB98 /* THFeedView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AA1DCF245CA3C40052BB98 /* THFeedView.framework */; };
 		E2AA1DDE245CA3C40052BB98 /* THFeedViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA1DDD245CA3C40052BB98 /* THFeedViewTests.swift */; };
-		E2AA1DE0245CA3C40052BB98 /* THFeedView.h in Headers */ = {isa = PBXBuildFile; fileRef = E2AA1DD2245CA3C40052BB98 /* THFeedView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E2AA1DED245CA4190052BB98 /* THBaseSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA1DEC245CA4190052BB98 /* THBaseSectionController.swift */; };
-		E2AA1DF0245CA4420052BB98 /* THSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA1DEF245CA4420052BB98 /* THSection.swift */; };
-		E2AA1DF3245CA4960052BB98 /* THLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA1DF2245CA4960052BB98 /* THLayouts.swift */; };
-		E2AA1DF6245CA4D80052BB98 /* THFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA1DF5245CA4D80052BB98 /* THFeedView.swift */; };
-		E2AA1DF9245CA5110052BB98 /* THSectionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA1DF8245CA5110052BB98 /* THSectionProvider.swift */; };
-		E2AA1DFC245CA5680052BB98 /* THFeedViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA1DFB245CA5680052BB98 /* THFeedViewDataSource.swift */; };
-		E2AA1DFE245CA5720052BB98 /* THFeedViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA1DFD245CA5720052BB98 /* THFeedViewDelegate.swift */; };
-		E2B6050C24BF7EB700A77C5E /* THBaseDecorationItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6050B24BF7EB700A77C5E /* THBaseDecorationItems.swift */; };
 		E2B6051024BF81BD00A77C5E /* QuickRecoBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6050F24BF81BD00A77C5E /* QuickRecoBackgroundView.swift */; };
 		E2B6051324C0DE0600A77C5E /* NavigationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6051224C0DE0600A77C5E /* NavigationButtonView.swift */; };
 		E2B6051524C0DE1200A77C5E /* NavigationButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B6051424C0DE1200A77C5E /* NavigationButtonView.xib */; };
 		E2B6051824C0E9A600A77C5E /* Float+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6051724C0E9A600A77C5E /* Float+Formatter.swift */; };
 		E2B6051B24C25AC000A77C5E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6051A24C25AC000A77C5E /* MenuViewController.swift */; };
 		E2B6051D24C2614D00A77C5E /* ExamplesUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6051C24C2614D00A77C5E /* ExamplesUseCases.swift */; };
-		E2D1F3D324BD41C800B25E44 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D1F3D224BD41C800B25E44 /* ReusableView.swift */; };
-		E2D1F3D524BD425000B25E44 /* UICollectionView+ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D1F3D424BD425000B25E44 /* UICollectionView+ReusableView.swift */; };
 		E2D1F3D924BE8AC800B25E44 /* TitleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D1F3D824BE8AC800B25E44 /* TitleHeaderView.swift */; };
 		E2D1F3DB24BE8B9F00B25E44 /* TitleHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2D1F3DA24BE8B9F00B25E44 /* TitleHeaderView.xib */; };
-		E2D1F3DD24BE8F7100B25E44 /* THBaseSectionSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D1F3DC24BE8F7100B25E44 /* THBaseSectionSupplementaryView.swift */; };
 		E2D1F3E424BF59B100B25E44 /* QuickRecomendationsSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D1F3E324BF59B100B25E44 /* QuickRecomendationsSectionController.swift */; };
 		E2D1F3E624BF5A1800B25E44 /* QuickRecoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2D1F3E524BF5A1800B25E44 /* QuickRecoViewCell.xib */; };
 		E2D1F3E824BF5A3C00B25E44 /* QuickRecoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D1F3E724BF5A3C00B25E44 /* QuickRecoViewCell.swift */; };
@@ -91,31 +92,31 @@
 		E20EE168246A37DC006B8A2E /* TrendingSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingSectionController.swift; sourceTree = "<group>"; };
 		E20EE16B246A39EC006B8A2E /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		E20EE16E246A3D32006B8A2E /* TrendingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
+		E28768EA25B315BD000AFF2E /* THBaseDecorationItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THBaseDecorationItems.swift; sourceTree = "<group>"; };
+		E28768EB25B315BD000AFF2E /* THBaseSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THBaseSectionController.swift; sourceTree = "<group>"; };
+		E28768EC25B315BD000AFF2E /* THSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THSection.swift; sourceTree = "<group>"; };
+		E28768ED25B315BD000AFF2E /* THBaseSectionSupplementaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THBaseSectionSupplementaryView.swift; sourceTree = "<group>"; };
+		E28768EE25B315BD000AFF2E /* THSectionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THSectionProvider.swift; sourceTree = "<group>"; };
+		E28768F025B315BD000AFF2E /* UICollectionView+ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReusableView.swift"; sourceTree = "<group>"; };
+		E28768F125B315BD000AFF2E /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		E28768F325B315BD000AFF2E /* THLayouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THLayouts.swift; sourceTree = "<group>"; };
+		E28768F525B315BD000AFF2E /* THFeedViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THFeedViewDataSource.swift; sourceTree = "<group>"; };
+		E28768F625B315BD000AFF2E /* THFeedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THFeedView.swift; sourceTree = "<group>"; };
+		E28768F725B315BD000AFF2E /* THFeedViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THFeedViewDelegate.swift; sourceTree = "<group>"; };
+		E28768F825B315BD000AFF2E /* THFeedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THFeedView.h; sourceTree = "<group>"; };
+		E28768F925B315BD000AFF2E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2AA1DCF245CA3C40052BB98 /* THFeedView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = THFeedView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2AA1DD2245CA3C40052BB98 /* THFeedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THFeedView.h; sourceTree = "<group>"; };
-		E2AA1DD3245CA3C40052BB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2AA1DD8245CA3C40052BB98 /* THFeedViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = THFeedViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2AA1DDD245CA3C40052BB98 /* THFeedViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THFeedViewTests.swift; sourceTree = "<group>"; };
 		E2AA1DDF245CA3C40052BB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2AA1DEC245CA4190052BB98 /* THBaseSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THBaseSectionController.swift; sourceTree = "<group>"; };
-		E2AA1DEF245CA4420052BB98 /* THSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THSection.swift; sourceTree = "<group>"; };
-		E2AA1DF2245CA4960052BB98 /* THLayouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THLayouts.swift; sourceTree = "<group>"; };
-		E2AA1DF5245CA4D80052BB98 /* THFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THFeedView.swift; sourceTree = "<group>"; };
-		E2AA1DF8245CA5110052BB98 /* THSectionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THSectionProvider.swift; sourceTree = "<group>"; };
-		E2AA1DFB245CA5680052BB98 /* THFeedViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THFeedViewDataSource.swift; sourceTree = "<group>"; };
-		E2AA1DFD245CA5720052BB98 /* THFeedViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THFeedViewDelegate.swift; sourceTree = "<group>"; };
-		E2B6050B24BF7EB700A77C5E /* THBaseDecorationItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THBaseDecorationItems.swift; sourceTree = "<group>"; };
 		E2B6050F24BF81BD00A77C5E /* QuickRecoBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickRecoBackgroundView.swift; sourceTree = "<group>"; };
 		E2B6051224C0DE0600A77C5E /* NavigationButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButtonView.swift; sourceTree = "<group>"; };
 		E2B6051424C0DE1200A77C5E /* NavigationButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationButtonView.xib; sourceTree = "<group>"; };
 		E2B6051724C0E9A600A77C5E /* Float+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Formatter.swift"; sourceTree = "<group>"; };
 		E2B6051A24C25AC000A77C5E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		E2B6051C24C2614D00A77C5E /* ExamplesUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesUseCases.swift; sourceTree = "<group>"; };
-		E2D1F3D224BD41C800B25E44 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
-		E2D1F3D424BD425000B25E44 /* UICollectionView+ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReusableView.swift"; sourceTree = "<group>"; };
 		E2D1F3D824BE8AC800B25E44 /* TitleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeaderView.swift; sourceTree = "<group>"; };
 		E2D1F3DA24BE8B9F00B25E44 /* TitleHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleHeaderView.xib; sourceTree = "<group>"; };
-		E2D1F3DC24BE8F7100B25E44 /* THBaseSectionSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THBaseSectionSupplementaryView.swift; sourceTree = "<group>"; };
 		E2D1F3E324BF59B100B25E44 /* QuickRecomendationsSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickRecomendationsSectionController.swift; sourceTree = "<group>"; };
 		E2D1F3E524BF5A1800B25E44 /* QuickRecoViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuickRecoViewCell.xib; sourceTree = "<group>"; };
 		E2D1F3E724BF5A3C00B25E44 /* QuickRecoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickRecoViewCell.swift; sourceTree = "<group>"; };
@@ -216,10 +217,71 @@
 			path = Trending;
 			sourceTree = "<group>";
 		};
+		E28768E725B315BD000AFF2E /* THFeedView */ = {
+			isa = PBXGroup;
+			children = (
+				E28768E825B315BD000AFF2E /* LibraryComponents */,
+				E28768F825B315BD000AFF2E /* THFeedView.h */,
+				E28768F925B315BD000AFF2E /* Info.plist */,
+			);
+			name = THFeedView;
+			path = Sources/THFeedView;
+			sourceTree = "<group>";
+		};
+		E28768E825B315BD000AFF2E /* LibraryComponents */ = {
+			isa = PBXGroup;
+			children = (
+				E28768E925B315BD000AFF2E /* Core */,
+				E28768EF25B315BD000AFF2E /* Extensions */,
+				E28768F225B315BD000AFF2E /* Layouts */,
+				E28768F425B315BD000AFF2E /* FeedView */,
+			);
+			path = LibraryComponents;
+			sourceTree = "<group>";
+		};
+		E28768E925B315BD000AFF2E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E28768EA25B315BD000AFF2E /* THBaseDecorationItems.swift */,
+				E28768EB25B315BD000AFF2E /* THBaseSectionController.swift */,
+				E28768EC25B315BD000AFF2E /* THSection.swift */,
+				E28768ED25B315BD000AFF2E /* THBaseSectionSupplementaryView.swift */,
+				E28768EE25B315BD000AFF2E /* THSectionProvider.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E28768EF25B315BD000AFF2E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E28768F025B315BD000AFF2E /* UICollectionView+ReusableView.swift */,
+				E28768F125B315BD000AFF2E /* ReusableView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E28768F225B315BD000AFF2E /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				E28768F325B315BD000AFF2E /* THLayouts.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		E28768F425B315BD000AFF2E /* FeedView */ = {
+			isa = PBXGroup;
+			children = (
+				E28768F525B315BD000AFF2E /* THFeedViewDataSource.swift */,
+				E28768F625B315BD000AFF2E /* THFeedView.swift */,
+				E28768F725B315BD000AFF2E /* THFeedViewDelegate.swift */,
+			);
+			path = FeedView;
+			sourceTree = "<group>";
+		};
 		E2AA1DC5245CA3C40052BB98 = {
 			isa = PBXGroup;
 			children = (
-				E2AA1DD1245CA3C40052BB98 /* THFeedView */,
+				E28768E725B315BD000AFF2E /* THFeedView */,
 				E2AA1DDC245CA3C40052BB98 /* THFeedViewTests */,
 				E20EE148246A35F4006B8A2E /* Example Test App */,
 				E2AA1DD0245CA3C40052BB98 /* Products */,
@@ -238,16 +300,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E2AA1DD1245CA3C40052BB98 /* THFeedView */ = {
-			isa = PBXGroup;
-			children = (
-				E2AA1DE9245CA3D50052BB98 /* LibraryComponents */,
-				E2AA1DD2245CA3C40052BB98 /* THFeedView.h */,
-				E2AA1DD3245CA3C40052BB98 /* Info.plist */,
-			);
-			path = THFeedView;
-			sourceTree = "<group>";
-		};
 		E2AA1DDC245CA3C40052BB98 /* THFeedViewTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,47 +307,6 @@
 				E2AA1DDF245CA3C40052BB98 /* Info.plist */,
 			);
 			path = THFeedViewTests;
-			sourceTree = "<group>";
-		};
-		E2AA1DE9245CA3D50052BB98 /* LibraryComponents */ = {
-			isa = PBXGroup;
-			children = (
-				E2D1F3D124BD41B500B25E44 /* Extensions */,
-				E2AA1DEB245CA3FA0052BB98 /* Core */,
-				E2AA1DF1245CA48A0052BB98 /* Layouts */,
-				E2AA1DF4245CA4CC0052BB98 /* FeedView */,
-			);
-			path = LibraryComponents;
-			sourceTree = "<group>";
-		};
-		E2AA1DEB245CA3FA0052BB98 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				E2AA1DEC245CA4190052BB98 /* THBaseSectionController.swift */,
-				E2AA1DEF245CA4420052BB98 /* THSection.swift */,
-				E2AA1DF8245CA5110052BB98 /* THSectionProvider.swift */,
-				E2D1F3DC24BE8F7100B25E44 /* THBaseSectionSupplementaryView.swift */,
-				E2B6050B24BF7EB700A77C5E /* THBaseDecorationItems.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		E2AA1DF1245CA48A0052BB98 /* Layouts */ = {
-			isa = PBXGroup;
-			children = (
-				E2AA1DF2245CA4960052BB98 /* THLayouts.swift */,
-			);
-			path = Layouts;
-			sourceTree = "<group>";
-		};
-		E2AA1DF4245CA4CC0052BB98 /* FeedView */ = {
-			isa = PBXGroup;
-			children = (
-				E2AA1DF5245CA4D80052BB98 /* THFeedView.swift */,
-				E2AA1DFB245CA5680052BB98 /* THFeedViewDataSource.swift */,
-				E2AA1DFD245CA5720052BB98 /* THFeedViewDelegate.swift */,
-			);
-			path = FeedView;
 			sourceTree = "<group>";
 		};
 		E2B6051124C0DDE300A77C5E /* NavigationButton */ = {
@@ -311,15 +322,6 @@
 			isa = PBXGroup;
 			children = (
 				E2B6051724C0E9A600A77C5E /* Float+Formatter.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		E2D1F3D124BD41B500B25E44 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E2D1F3D224BD41C800B25E44 /* ReusableView.swift */,
-				E2D1F3D424BD425000B25E44 /* UICollectionView+ReusableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -369,7 +371,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2AA1DE0245CA3C40052BB98 /* THFeedView.h in Headers */,
+				E287690525B315BD000AFF2E /* THFeedView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +522,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E287690625B315BD000AFF2E /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,17 +569,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2B6050C24BF7EB700A77C5E /* THBaseDecorationItems.swift in Sources */,
-				E2AA1DF9245CA5110052BB98 /* THSectionProvider.swift in Sources */,
-				E2AA1DF0245CA4420052BB98 /* THSection.swift in Sources */,
-				E2AA1DED245CA4190052BB98 /* THBaseSectionController.swift in Sources */,
-				E2AA1DFE245CA5720052BB98 /* THFeedViewDelegate.swift in Sources */,
-				E2AA1DF6245CA4D80052BB98 /* THFeedView.swift in Sources */,
-				E2D1F3D524BD425000B25E44 /* UICollectionView+ReusableView.swift in Sources */,
-				E2D1F3D324BD41C800B25E44 /* ReusableView.swift in Sources */,
-				E2AA1DF3245CA4960052BB98 /* THLayouts.swift in Sources */,
-				E2AA1DFC245CA5680052BB98 /* THFeedViewDataSource.swift in Sources */,
-				E2D1F3DD24BE8F7100B25E44 /* THBaseSectionSupplementaryView.swift in Sources */,
+				E28768FB25B315BD000AFF2E /* THBaseSectionController.swift in Sources */,
+				E287690425B315BD000AFF2E /* THFeedViewDelegate.swift in Sources */,
+				E28768FA25B315BD000AFF2E /* THBaseDecorationItems.swift in Sources */,
+				E287690225B315BD000AFF2E /* THFeedViewDataSource.swift in Sources */,
+				E28768FC25B315BD000AFF2E /* THSection.swift in Sources */,
+				E28768FD25B315BD000AFF2E /* THBaseSectionSupplementaryView.swift in Sources */,
+				E28768FF25B315BD000AFF2E /* UICollectionView+ReusableView.swift in Sources */,
+				E287690025B315BD000AFF2E /* ReusableView.swift in Sources */,
+				E28768FE25B315BD000AFF2E /* THSectionProvider.swift in Sources */,
+				E287690325B315BD000AFF2E /* THFeedView.swift in Sources */,
+				E287690125B315BD000AFF2E /* THLayouts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,6 +667,7 @@
 		E20EE159246A35F5006B8A2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Example Test App/Info.plist";
@@ -682,6 +686,7 @@
 		E20EE15A246A35F5006B8A2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Example Test App/Info.plist";
