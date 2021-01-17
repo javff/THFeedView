@@ -17,6 +17,8 @@ struct CustomSection: BaseSection {
     let id: String
     let type: SectionType
     var data: [AnyHashable]
+    
+    
 }
 
 

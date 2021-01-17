@@ -31,7 +31,7 @@ public protocol BaseSectionControllerProtocol: AnyObject {
 }
 
 
-open class BaseSectionController<T: Codable & Hashable>: NSObject, BaseSectionControllerProtocol {
+open class BaseSectionController<T: Decodable & Hashable>: NSObject, BaseSectionControllerProtocol {
     
     public let section: BaseSection
     public weak var viewController: UIViewController?

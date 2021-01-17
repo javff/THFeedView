@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import THFeedView
 
-struct TrendingModel: Codable & Hashable {
+struct TrendingModel: Decodable & Hashable {
     let id: String
     let image_url: String
     let title: String

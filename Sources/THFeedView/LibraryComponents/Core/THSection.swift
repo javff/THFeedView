@@ -13,3 +13,11 @@ public protocol BaseSection: Any {
     var sectionType: String { get }
     var data: [AnyHashable] { get }
 }
+
+public extension Decodable {
+    func decodedHashable<T: Hashable & Decodable>(_ type: T, data: Data) -> [AnyHashable] {
+        let jsonDecoder = JSONDecoder()
+        let info = try? jsonDecoder.decode([T].self, from: data)
+        return info ?? []
+    }
+}
