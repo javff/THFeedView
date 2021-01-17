@@ -53,8 +53,8 @@ class Example1DataProvider: DataSectionProviderProtocol {
                                 price: 1000.0,
                                 image_url: "laptop2",
                                 title: "Geek",
-                                description: "Descubre"),
-    ),
+                                description: "Descubre")
+    ]),
         CustomSection(
             id: "id10",
             type: .trending,

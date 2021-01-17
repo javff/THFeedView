@@ -30,16 +30,14 @@
 		E287690225B315BD000AFF2E /* THFeedViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28768F525B315BD000AFF2E /* THFeedViewDataSource.swift */; };
 		E287690325B315BD000AFF2E /* THFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28768F625B315BD000AFF2E /* THFeedView.swift */; };
 		E287690425B315BD000AFF2E /* THFeedViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28768F725B315BD000AFF2E /* THFeedViewDelegate.swift */; };
-		E287690525B315BD000AFF2E /* THFeedView.h in Headers */ = {isa = PBXBuildFile; fileRef = E28768F825B315BD000AFF2E /* THFeedView.h */; };
-		E287690625B315BD000AFF2E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E28768F925B315BD000AFF2E /* Info.plist */; };
 		E2AA1DD9245CA3C40052BB98 /* THFeedView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AA1DCF245CA3C40052BB98 /* THFeedView.framework */; };
-		E2AA1DDE245CA3C40052BB98 /* THFeedViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA1DDD245CA3C40052BB98 /* THFeedViewTests.swift */; };
 		E2B6051024BF81BD00A77C5E /* QuickRecoBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6050F24BF81BD00A77C5E /* QuickRecoBackgroundView.swift */; };
 		E2B6051324C0DE0600A77C5E /* NavigationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6051224C0DE0600A77C5E /* NavigationButtonView.swift */; };
 		E2B6051524C0DE1200A77C5E /* NavigationButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B6051424C0DE1200A77C5E /* NavigationButtonView.xib */; };
 		E2B6051824C0E9A600A77C5E /* Float+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6051724C0E9A600A77C5E /* Float+Formatter.swift */; };
 		E2B6051B24C25AC000A77C5E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6051A24C25AC000A77C5E /* MenuViewController.swift */; };
 		E2B6051D24C2614D00A77C5E /* ExamplesUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6051C24C2614D00A77C5E /* ExamplesUseCases.swift */; };
+		E2C1167025B45E3C007C89A4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2C1166F25B45E3C007C89A4 /* Info.plist */; };
 		E2D1F3D924BE8AC800B25E44 /* TitleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D1F3D824BE8AC800B25E44 /* TitleHeaderView.swift */; };
 		E2D1F3DB24BE8B9F00B25E44 /* TitleHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2D1F3DA24BE8B9F00B25E44 /* TitleHeaderView.xib */; };
 		E2D1F3E424BF59B100B25E44 /* QuickRecomendationsSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D1F3E324BF59B100B25E44 /* QuickRecomendationsSectionController.swift */; };
@@ -103,18 +101,15 @@
 		E28768F525B315BD000AFF2E /* THFeedViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THFeedViewDataSource.swift; sourceTree = "<group>"; };
 		E28768F625B315BD000AFF2E /* THFeedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THFeedView.swift; sourceTree = "<group>"; };
 		E28768F725B315BD000AFF2E /* THFeedViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THFeedViewDelegate.swift; sourceTree = "<group>"; };
-		E28768F825B315BD000AFF2E /* THFeedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THFeedView.h; sourceTree = "<group>"; };
-		E28768F925B315BD000AFF2E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2AA1DCF245CA3C40052BB98 /* THFeedView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = THFeedView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2AA1DD8245CA3C40052BB98 /* THFeedViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = THFeedViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2AA1DDD245CA3C40052BB98 /* THFeedViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THFeedViewTests.swift; sourceTree = "<group>"; };
-		E2AA1DDF245CA3C40052BB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2B6050F24BF81BD00A77C5E /* QuickRecoBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickRecoBackgroundView.swift; sourceTree = "<group>"; };
 		E2B6051224C0DE0600A77C5E /* NavigationButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButtonView.swift; sourceTree = "<group>"; };
 		E2B6051424C0DE1200A77C5E /* NavigationButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationButtonView.xib; sourceTree = "<group>"; };
 		E2B6051724C0E9A600A77C5E /* Float+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+Formatter.swift"; sourceTree = "<group>"; };
 		E2B6051A24C25AC000A77C5E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		E2B6051C24C2614D00A77C5E /* ExamplesUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesUseCases.swift; sourceTree = "<group>"; };
+		E2C1166F25B45E3C007C89A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = LibraryComponents/Info.plist; sourceTree = "<group>"; };
 		E2D1F3D824BE8AC800B25E44 /* TitleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeaderView.swift; sourceTree = "<group>"; };
 		E2D1F3DA24BE8B9F00B25E44 /* TitleHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleHeaderView.xib; sourceTree = "<group>"; };
 		E2D1F3E324BF59B100B25E44 /* QuickRecomendationsSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickRecomendationsSectionController.swift; sourceTree = "<group>"; };
@@ -221,8 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				E28768E825B315BD000AFF2E /* LibraryComponents */,
-				E28768F825B315BD000AFF2E /* THFeedView.h */,
-				E28768F925B315BD000AFF2E /* Info.plist */,
+				E2C1166F25B45E3C007C89A4 /* Info.plist */,
 			);
 			name = THFeedView;
 			path = Sources/THFeedView;
@@ -282,7 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				E28768E725B315BD000AFF2E /* THFeedView */,
-				E2AA1DDC245CA3C40052BB98 /* THFeedViewTests */,
 				E20EE148246A35F4006B8A2E /* Example Test App */,
 				E2AA1DD0245CA3C40052BB98 /* Products */,
 				E20EE15B246A3614006B8A2E /* Frameworks */,
@@ -298,15 +291,6 @@
 				E20EE147246A35F4006B8A2E /* Example Test App.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		E2AA1DDC245CA3C40052BB98 /* THFeedViewTests */ = {
-			isa = PBXGroup;
-			children = (
-				E2AA1DDD245CA3C40052BB98 /* THFeedViewTests.swift */,
-				E2AA1DDF245CA3C40052BB98 /* Info.plist */,
-			);
-			path = THFeedViewTests;
 			sourceTree = "<group>";
 		};
 		E2B6051124C0DDE300A77C5E /* NavigationButton */ = {
@@ -371,7 +355,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E287690525B315BD000AFF2E /* THFeedView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,7 +505,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E287690625B315BD000AFF2E /* Info.plist in Resources */,
+				E2C1167025B45E3C007C89A4 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,7 +570,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2AA1DDE245CA3C40052BB98 /* THFeedViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,7 +813,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = THFeedView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -859,7 +840,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = THFeedView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
