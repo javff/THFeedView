@@ -67,8 +67,8 @@ class HomeExampleViewController: UIViewController {
     
     private func registerSections() {
         feedViewProvider.registeredSections = [
-            SectionType.trending.rawValue: TrendingSectionController.self,
-            SectionType.quickReco.rawValue: QuickRecomendationsSectionController.self
+            "trending": TrendingSectionController.self,
+            "quickReco": QuickRecomendationsSectionController.self
         ]
     }
     

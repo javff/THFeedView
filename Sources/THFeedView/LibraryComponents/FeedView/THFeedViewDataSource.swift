@@ -15,5 +15,5 @@ public protocol THFeedViewDataSource: class {
 }
 
 public extension THFeedViewDataSource {
-    public func registerDecorationItems(layout: UICollectionViewCompositionalLayout) {}
+     func registerDecorationItems(layout: UICollectionViewCompositionalLayout) {}
 }

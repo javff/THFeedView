@@ -14,7 +14,8 @@ public typealias CustomSnapshot = NSDiffableDataSourceSnapshot<String, AnyHashab
 
 public protocol BaseSectionControllerProtocol: AnyObject {
     
-  var section: BaseSection { get }
+    var id: String { get }
+    var type: String { get }
     
   func configureDataSource(in collectionView: UICollectionView, with dataSource: inout CustomDataSource)
     
@@ -30,14 +31,62 @@ public protocol BaseSectionControllerProtocol: AnyObject {
     init(section: BaseSection, viewController: UIViewController?)
 }
 
+extension Encodable {
+    func mlvpp_asDictionary() throws -> [String: Any] {
+        let jsonEncoder = JSONEncoder()
+        jsonEncoder.keyEncodingStrategy = .convertToSnakeCase
+        let data = try jsonEncoder.encode(self)
+        guard let dictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] else {
+            throw NSError()
+        }
+        return dictionary
+    }
+
+    func mlvpp_encode() throws -> Data {
+        let jsonEncoder = JSONEncoder()
+        jsonEncoder.keyEncodingStrategy = .convertToSnakeCase
+        return try jsonEncoder.encode(self)
+    }
+}
+
+extension Decodable {
+    static func mlvpp_decode(fromJsonData jsonData: Data) throws -> Self {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        return try decoder.decode(self, from: jsonData)
+    }
+
+    static func mlvpp_decode(fromDictionary dictionary: [AnyHashable: Any]) throws -> Self {
+        return try Self.mlvpp_decode(withJSONObject: dictionary)
+    }
+
+    static func mlvpp_decode(fromArray array: [Any]) throws -> Self {
+        return try Self.mlvpp_decode(withJSONObject: array)
+    }
+
+    private static func mlvpp_decode(withJSONObject object: Any) throws -> Self {
+        let jsonData = try JSONSerialization.data(withJSONObject: object, options: [])
+        return try Self.mlvpp_decode(fromJsonData: jsonData)
+    }
+}
+
+
 
 open class BaseSectionController<T: Decodable & Hashable>: NSObject, BaseSectionControllerProtocol {
-    
-    public let section: BaseSection
+        
+    public let id: String
+    public let type: String
+    public let data:[T]
     public weak var viewController: UIViewController?
     
     public required init(section: BaseSection, viewController: UIViewController?) {
-        self.section = section
+        self.id = section.id
+        self.type = section.type
+        let jsonDecorder = JSONDecoder()
+        self.data = section.data.compactMap {
+            guard let data = try? $0.mlvpp_encode() else { return nil }
+            return try? jsonDecorder.decode(T.self, from: data)
+        }
         self.viewController = viewController
         super.init()
     }
@@ -72,12 +121,12 @@ open class BaseSectionController<T: Decodable & Hashable>: NSObject, BaseSection
     }
 
     final public func configureSnapshot(snapshot: inout CustomSnapshot) {
-        guard !snapshot.sectionIdentifiers.contains(section.id) else {
-            NSLog("Id \(section.id) is repeteat. Ignoring section ...")
+        guard !snapshot.sectionIdentifiers.contains(id) else {
+            NSLog("Id \(id) is repeteat. Ignoring section ...")
             return
         }
-        snapshot.appendSections([section.id])
-        snapshot.appendItems(section.data)
+        snapshot.appendSections([id])
+        snapshot.appendItems(data)
     }
     
 }

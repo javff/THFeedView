@@ -24,7 +24,7 @@ open class FeedViewSectionProvider: NSObject, FeedViewSectionProviderProtocol {
     private var cacheSections:[BaseSectionControllerProtocol] = []
     
     final public func create(section: BaseSection) -> BaseSectionControllerProtocol? {
-        guard let SectionControllerType = registeredSections[section.sectionType] else {
+        guard let SectionControllerType = registeredSections[section.type] else {
             return nil
         }
         let sectionController = SectionControllerType.init(section: section, viewController: viewController)
@@ -33,8 +33,7 @@ open class FeedViewSectionProvider: NSObject, FeedViewSectionProviderProtocol {
     }
     
     final public func find(section: BaseSection) -> BaseSectionControllerProtocol? {
-        return cacheSections.first { section.id == $0.section.id }
-
+        return cacheSections.first { section.id == $0.id }
     }
     
     final public func find(sectionIndex position: Int) -> BaseSectionControllerProtocol? {

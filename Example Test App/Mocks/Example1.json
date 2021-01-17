@@ -1,0 +1,12 @@
+[{
+"id": "id1",
+"type": "trending",
+"data": [{
+        "id": "1",
+        "image_url": "geek",
+        "title": "Geek",
+        "description": "Descubre"
+        }
+    ]
+}]
+

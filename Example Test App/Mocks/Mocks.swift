@@ -12,58 +12,17 @@ import THFeedView
 class Example1DataProvider: DataSectionProviderProtocol {
     
     func getData(result: @escaping (Result<[BaseSection], Error>) -> Void) {
-        result(.success(sections))
+        
+        if let path = Bundle.main.path(forResource: "Example1", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonDecoder = JSONDecoder()
+                let response = try jsonDecoder.decode([FeedSection].self, from: data)
+                result(.success(response))
+            } catch (let error) {
+                result(.failure(error))
+            }
+        }
+        
     }
-    
-    let sections: [BaseSection] = [
-    CustomSection(
-        id: "id1",
-        type: .trending,
-        data: [
-            TrendingModel(id: "1",
-                          image_url: "geek",
-                          title: "Geek",
-                          description: "Descubre")
-        ]
-    ),
-    CustomSection(
-        id: "id2",
-        type: .quickReco,
-        data: [
-            QuickRecomendationsSectionModel(
-                id: "1",
-                price: 1000.0,
-                image_url: "laptop",
-                title: "Asus",
-                description: "laptop x409fb-ek016t"),
-            QuickRecomendationsSectionModel(
-                                id: "1",
-                                price: 1000.0,
-                                image_url: "laptop2",
-                                title: "Asus",
-                                description: "laptop x409fb-ek016t"),
-            QuickRecomendationsSectionModel(
-                                id: "1",
-                                price: 1000.0,
-                                image_url: "laptop",
-                                title: "Geek",
-                                description: "Descubre"),
-            QuickRecomendationsSectionModel(
-                                id: "1",
-                                price: 1000.0,
-                                image_url: "laptop2",
-                                title: "Geek",
-                                description: "Descubre")
-    ]),
-        CustomSection(
-            id: "id10",
-            type: .trending,
-            data: [
-                TrendingModel(id: "1111",
-                              image_url: "geek",
-                              title: "Geek",
-                              description: "Descubre")
-            ]
-        )
-    ]
 }
