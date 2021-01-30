@@ -27,6 +27,6 @@ class CarouselSectionController: BaseSectionController<CarouselModel> {
     }
     
     override func createLayout(isWide: Bool) -> NSCollectionLayoutSection {
-        THFeedLayouts.carouseLayout()
+        THFeedLayouts.carouselLayout()
     }
 }
