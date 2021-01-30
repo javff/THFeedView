@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DBB27A3F25C44D4300FD7254 /* CarouselSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB27A3E25C44D4300FD7254 /* CarouselSectionController.swift */; };
+		DBB27A4425C44D5B00FD7254 /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB27A4325C44D5B00FD7254 /* CarouselCell.swift */; };
 		E20EE14A246A35F4006B8A2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20EE149246A35F4006B8A2E /* AppDelegate.swift */; };
 		E20EE14C246A35F4006B8A2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20EE14B246A35F4006B8A2E /* SceneDelegate.swift */; };
 		E20EE14E246A35F4006B8A2E /* HomeExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20EE14D246A35F4006B8A2E /* HomeExampleViewController.swift */; };
@@ -80,6 +82,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DBB27A3E25C44D4300FD7254 /* CarouselSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselSectionController.swift; sourceTree = "<group>"; };
+		DBB27A4325C44D5B00FD7254 /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
 		E20EE136246A35D3006B8A2E /* Example AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Example AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20EE147246A35F4006B8A2E /* Example Test App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example Test App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20EE149246A35F4006B8A2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +161,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DBB27A3D25C44D0700FD7254 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				DBB27A3E25C44D4300FD7254 /* CarouselSectionController.swift */,
+				DBB27A4325C44D5B00FD7254 /* CarouselCell.swift */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
 		E20EE148246A35F4006B8A2E /* Example Test App */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +208,7 @@
 			children = (
 				E2D1F3E224BF599300B25E44 /* QuickRecomendations */,
 				E20EE16D246A3C79006B8A2E /* Trending */,
+				DBB27A3D25C44D0700FD7254 /* Carousel */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -549,6 +563,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E20EE16F246A3D32006B8A2E /* TrendingCell.swift in Sources */,
+				DBB27A3F25C44D4300FD7254 /* CarouselSectionController.swift in Sources */,
 				E20EE169246A37DC006B8A2E /* TrendingSectionController.swift in Sources */,
 				E20EE16C246A39EC006B8A2E /* Mocks.swift in Sources */,
 				E2B6051B24C25AC000A77C5E /* MenuViewController.swift in Sources */,
@@ -558,6 +573,7 @@
 				E20EE14E246A35F4006B8A2E /* HomeExampleViewController.swift in Sources */,
 				E2D1F3E424BF59B100B25E44 /* QuickRecomendationsSectionController.swift in Sources */,
 				E20EE14A246A35F4006B8A2E /* AppDelegate.swift in Sources */,
+				DBB27A4425C44D5B00FD7254 /* CarouselCell.swift in Sources */,
 				E2B6051024BF81BD00A77C5E /* QuickRecoBackgroundView.swift in Sources */,
 				E2D1F3D924BE8AC800B25E44 /* TitleHeaderView.swift in Sources */,
 				E20EE14C246A35F4006B8A2E /* SceneDelegate.swift in Sources */,

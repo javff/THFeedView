@@ -14,8 +14,8 @@ public class THFeedLayouts {
     public class func simpleCardLayout() -> NSCollectionLayoutSection {
         
         let itemSize = NSCollectionLayoutSize(
-          widthDimension: .fractionalWidth(1.0),
-          heightDimension: .fractionalHeight(1.0)
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(1.0)
         )
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
@@ -58,4 +58,28 @@ public class THFeedLayouts {
                 
         return section
     }
+    
+    public class func carouselLayout() -> NSCollectionLayoutSection {
+        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(0.9),
+            heightDimension: .absolute(215)
+        )
+        
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = 12
+        section.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 16)
+        section.supplementariesFollowContentInsets = false
+        section.orthogonalScrollingBehavior = .continuous
+        
+        return section
+        
+    }
+    
 }
